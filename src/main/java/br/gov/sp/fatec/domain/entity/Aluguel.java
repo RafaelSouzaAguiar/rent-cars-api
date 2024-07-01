@@ -1,14 +1,12 @@
 package br.gov.sp.fatec.domain.entity;
 
 import br.gov.sp.fatec.domain.enums.AluguelStatus;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+
+import java.util.Date;
 
 @Entity
 @Getter
@@ -19,6 +17,10 @@ public class Aluguel {
     @Id
     @GeneratedValue
     private Long id;
+
+    private Date dataInicio;
+    private Date dataFim;
+    private double valor;
 
     @Enumerated(value = EnumType.STRING)
     private AluguelStatus status;
