@@ -35,12 +35,12 @@ public class ClienteControllerImpl implements ClienteController {
     @Override
     public ResponseEntity<Void> updateById(Long id, ClienteUpdateRequest request) {
         clienteService.updateById(id, request);
-        return null;
+        return ResponseEntity.noContent().build();
     }
 
     @Override
     public ResponseEntity<Void> deleteById(Long id) {
         clienteService.deleteById(id);
-        return null;
+        return ResponseEntity.noContent().build();
     }
 }

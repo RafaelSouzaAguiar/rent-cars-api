@@ -35,12 +35,12 @@ public class CarroControllerImpl implements CarroController {
     @Override
     public ResponseEntity<Void> updateById(Long id, CarroUpdateRequest request) {
         carroService.updateById(id, request);
-        return null;
+        return ResponseEntity.noContent().build();
     }
 
     @Override
     public ResponseEntity<Void> deleteById(Long id) {
         carroService.deleteById(id);
-        return null;
+        return ResponseEntity.noContent().build();
     }
 }

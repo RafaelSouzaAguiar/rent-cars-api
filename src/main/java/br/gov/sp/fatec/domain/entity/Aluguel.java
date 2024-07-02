@@ -24,4 +24,12 @@ public class Aluguel {
 
     @Enumerated(value = EnumType.STRING)
     private AluguelStatus status;
+
+    private Long cliente_id;
+    private Long carro_id;
+
+    // @ManyToOne
+    // private Carro carro;
+    // @ManyToOne
+    // private Cliente cliente;
 }
