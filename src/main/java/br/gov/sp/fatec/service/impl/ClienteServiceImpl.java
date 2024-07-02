@@ -8,11 +8,11 @@ import br.gov.sp.fatec.domain.response.ClienteResponse;
 import br.gov.sp.fatec.repository.ClienteRepository;
 import br.gov.sp.fatec.service.ClienteService;
 import java.util.List;
-import org.springframework.transaction.annotation.Transactional;
-
-import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import jakarta.persistence.EntityNotFoundException;
+import org.springframework.transaction.annotation.Transactional;
+
 
 @Service
 @RequiredArgsConstructor
@@ -35,7 +35,7 @@ public class ClienteServiceImpl implements ClienteService {
 
     public Cliente getById(Long id){
         return clienteRepository.findById(id).orElseThrow(
-            () -> new EntityNotFoundException("Funcionario não encontrado com id: " + id)
+            () -> new EntityNotFoundException("Cliente não encontrado com id: " + id)
         );
     }
 
